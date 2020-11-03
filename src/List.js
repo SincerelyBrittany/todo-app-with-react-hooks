@@ -1,22 +1,20 @@
-import React, { useState, useEffect } from "react";
-import ListItem from './ListItem'
+import React from "react";
 
-export default function List(props) {
-  const listItems = () => {
-   return props.items.map(i => (
-      <ListItem 
-      item={i.item} 
-      deleteCallback={props.handleDelete}
-      priority={i.priority} 
-      key={i.id} />
-      ))
+import ListItem from "./ListItem";
 
-  }
-  return(
-    <div>
-     {listItems()}
-    </div>
-  )
+export default function List({ items, handleDelete }) {
+  const listItems = () =>
+    items.map(i => (
+      <ListItem
+        item={i.item}
+        priority={i.priority}
+        key={i.id}
+        id={i.id}
+        deleteCallback={handleDelete}
+      />
+    ));
+
+  return <div>{listItems()}</div>;
 }
 
 
