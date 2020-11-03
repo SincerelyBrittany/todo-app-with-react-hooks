@@ -8,4 +8,8 @@ padding:5px;
 margin: 20px;
 `
 
-export {Card}
+const RedButton = styled.button`
+background-color: red;
+`
+
+export {Card, RedButton}
