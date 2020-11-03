@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
+import ListItem from './ListItem'
 
 export default function List(props) {
+  const listItems = () => {
+   return props.items.map(i => (
+      <ListItem item={i.item} priority={i.priority} key={i.id} />
+      ))
+
+  }
   return(
     <div>
-      {props.items}
+     {listItems()}
     </div>
   )
 }

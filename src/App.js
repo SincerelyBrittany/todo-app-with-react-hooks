@@ -4,7 +4,13 @@ import List from './List';
 
 export default function App() {
   // const items = ["wake up", "code"]
-  const [items, setItems] = useState(["wakeUP"])
+  const [items, setItems] = useState([
+    {
+      id: 1,
+      item: "wakeUP",
+      priority: "high"
+    }
+  ])
   return (
     <div className="App">
       <h1>Todos</h1>
