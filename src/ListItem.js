@@ -5,7 +5,6 @@ export default function ListItem(props){
 
   const handleDelete = (e) => {
       e.preventDefault()
-      console.log(props.deleteCallback)
      props.deleteCallback(props.id)
   }
 
