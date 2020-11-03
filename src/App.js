@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 import List from './List';
+import Form from './Form'
 
 export default function App() {
   // const items = ["wake up", "code"]
@@ -24,6 +25,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Todos</h1>
+      <Form />
       <List items={items} handleDelete={handleDelete}/>
     </div>
   );

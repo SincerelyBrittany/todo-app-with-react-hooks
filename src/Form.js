@@ -6,11 +6,17 @@ export default function Form(props){
   const [priorityText, setPriorityText] = useState('')
 
   const handleItemInputChange = (e) =>{
+    //you have control over what someone puts into a form here
     setItemText(e.target.value)
   }
 
   const handlePriorityInputChange = (e) =>{
     setPriorityText(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    props.submitCallback(itemText, priorityText)
   }
 
 return(
@@ -23,7 +29,7 @@ return(
         placeholder="priority" 
         onChange={handlePriorityInputChange} 
         value={priorityText}/>
-        <button> New Todo </button> 
+        <button onClick={handleSubmit}> New Todo </button> 
       </form>
     )
   }
