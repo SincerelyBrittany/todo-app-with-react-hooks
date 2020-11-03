@@ -16,6 +16,8 @@ export default function Form(props){
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setPriorityText("")
+    setItemText("")
     props.submitCallback(itemText, priorityText)
   }
 

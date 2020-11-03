@@ -10,12 +10,12 @@ export default function App() {
       id: 1,
       item: "wakeUP",
       priority: "high"
-    }, 
-    {
-      id: 2,
-      item: "wakeUP",
-      priority: "high"
-    }
+    } 
+    // {
+    //   id: 2,
+    //   item: "wakeUP",
+    //   priority: "high"
+    // }
   ])
 
   const handleDelete = (id) => {
